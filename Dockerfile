@@ -12,8 +12,6 @@ rm -rf /var/lib/apt/lists/*
 ENV PATH /opt/glassfish4/bin:$PATH
 
 ADD run.sh /run.sh
-ADD change_admin_password_func.sh /change_admin_password_func.sh
-ADD enable_secure_admin.sh /enable_secure_admin.sh
 
 RUN chmod +x /*.sh
 
