@@ -12,6 +12,7 @@ rm -rf /var/lib/apt/lists/*
 ENV PATH /opt/glassfish4/bin:$PATH
 
 ADD run.sh /run.sh
+ADD MTE.war /MTE.war
 
 RUN chmod +x /*.sh
 
