@@ -8,5 +8,7 @@ echo "=> Enabling secure admin login"
 echo "=> Restarting Glassfish server"
 asadmin stop-domain
 echo "=> Starting and running Glassfish server"
-asadmin start-domain -w
+asadmin start-domain 
+echo "=> Deploying App"
+asadmin deploy MTE.war -w
 
