@@ -7,7 +7,7 @@ asadmin start-domain
 echo "=> Restarting Glassfish server"
 asadmin stop-domain
 echo "=> Starting and running Glassfish server"
-asadmin start-domain -w
+asadmin start-domain
 echo "=> Enabling secure admin login"
 set password admin
 spawn asadmin enable-secure-admin
