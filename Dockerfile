@@ -14,6 +14,7 @@ COPY MTE.war /opt/glassfish4/glassfish/domains/domain1/autodeploy/MTE.war
 ENV PATH /opt/glassfish4/bin:$PATH
 
 ADD run.sh /run.sh
+ADD enable_secure_admin.sh /enable_secure_admin.sh
 
 RUN chmod +x /*.sh
 
