@@ -9,10 +9,11 @@ rm glassfish-4.0.zip && \
 apt-get clean && \
 rm -rf /var/lib/apt/lists/*
 
+COPY MTE.war /opt/glassfish4/glassfish/domains/domain1/autodeploy/MTE.war
+
 ENV PATH /opt/glassfish4/bin:$PATH
 
 ADD run.sh /run.sh
-ADD MTE.war /MTE.war
 
 RUN chmod +x /*.sh
 
