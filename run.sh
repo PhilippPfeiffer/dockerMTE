@@ -1,4 +1,5 @@
 #!/bin/bash
+#!/usr/bin/expect
 
 set -e
 
@@ -8,6 +9,12 @@ asadmin stop-domain
 echo "=> Starting and running Glassfish server"
 asadmin start-domain -w
 echo "=> Enabling secure admin login"
-/enable_secure_admin.sh
-echo "=> Deploying webapp on Glassfish server"
-asadmin deploy MTE.war
+set password admin
+spawn asadmin enable-secure-admin
+expect "admin"
+send "admin\n"
+expect "password"
+send "$password\n"
+expect eof
+exit
+
